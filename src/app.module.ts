@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { Product } from './products/products.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/products.module';
-
+import { CartModule } from './cart/cart.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -14,6 +14,7 @@ import { ProductsModule } from './products/products.module';
       synchronize: true,
     }),
     ProductsModule,
+    CartModule,
   ],
   controllers: [AppController],
   providers: [AppService],
